@@ -3,9 +3,19 @@ import { actors } from '../data'
 
 const Actors = () => {
     return (
-        <div>
-            {/* code goes here */}
-        </div>
+      <div>
+        <h1>Actors Page</h1>
+        {actors.map(actor => {
+          return (<div>
+          {actor.name}
+          <ul>
+            {actor.movies.map(movie => {
+              return <li>{movie}</li>
+            })}
+          </ul>
+          </div>)
+        })}
+      </div>
     )
 }
 
